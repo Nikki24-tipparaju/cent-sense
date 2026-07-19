@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CentSense — opt-in consent</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --ink: #1c2b22;
+    --paper: #f6f4ee;
+    --moss: #2f5d45;
+    --coin: #c98a3e;
+    --line: #d8d4c6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 1.5rem;
+  }
+
+  .mark::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--coin);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 2rem 0 0.75rem;
+  }
+
+  p { margin: 0 0 1rem; color: #3a4a3f; }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .label {
+    font-weight: 600;
+    color: var(--moss);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .msg {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-left: 3px solid var(--coin);
+    padding-left: 1rem;
+    margin: 0.5rem 0 0;
+  }
+
+  ul { margin: 0; padding-left: 1.25rem; color: #3a4a3f; }
+  li { margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="mark">CentSense</div>
+  <h1>Opt-in &amp; consent documentation</h1>
+
+  <p>
+    CentSense is a personal budgeting tool built and operated by a single individual, for that
+    same individual's own use. There is no public sign-up, no customer base, and no third party
+    ever receives a message from this system.
+  </p>
+
+  <div class="card">
+    <div class="label">Who opts in</div>
+    <p style="margin-bottom: 0;">
+      The account owner (developer) links their own bank and card accounts via Plaid, and
+      registers their own phone number as the sole recipient of alerts. This is a single, direct,
+      self-initiated action — the same person builds the tool, provides the phone number, and
+      receives every message.
+    </p>
+  </div>
+
+  <h2>What the recipient agrees to</h2>
+  <p>By providing their own number to the app's configuration, the account owner consents to:</p>
+  <ul>
+    <li>Receiving a text message after each purchase on their linked accounts, showing budget usage for that spending category.</li>
+    <li>Receiving one end-of-day summary text of that day's transactions.</li>
+    <li>Message frequency of roughly a few texts per day, tied directly to their own real purchases.</li>
+    <li>Standard message and data rates may apply, per their own mobile carrier plan.</li>
+  </ul>
+
+  <h2>Sample opt-in confirmation message</h2>
+  <div class="card">
+    <div class="label">Sent once, when linking a phone number</div>
+    <p class="msg">
+      "Welcome to CentSense. You'll get a text after each purchase and a daily summary,
+      based on your own budgets. Reply STOP at any time to stop receiving messages."
+    </p>
+  </div>
+
+  <h2>Opt-out</h2>
+  <p>
+    Since the sender and recipient are the same individual, opting out is as simple as the
+    account owner disabling their own notifications or removing their number from the app's
+    configuration. Standard STOP/HELP keyword handling is supported for compliance.
+  </p>
+</main>
+
+</body>
+</html>
