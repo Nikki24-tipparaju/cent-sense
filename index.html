@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CentSense — personal budget alerts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --ink: #1c2b22;
+    --paper: #f6f4ee;
+    --moss: #2f5d45;
+    --coin: #c98a3e;
+    --line: #d8d4c6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  header {
+    padding: 4rem 1.5rem 2rem;
+    max-width: 640px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 1.5rem;
+  }
+
+  .mark::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--coin);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2.75rem;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--moss);
+    margin: 0;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  section { margin-bottom: 2.75rem; }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem;
+  }
+
+  p { margin: 0 0 1rem; color: #3a4a3f; }
+
+  ul { margin: 0; padding-left: 1.25rem; color: #3a4a3f; }
+  li { margin-bottom: 0.5rem; }
+
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .facts div { font-size: 0.95rem; }
+  .facts dt { font-weight: 600; color: var(--moss); margin-bottom: 0.2rem; }
+  .facts dd { margin: 0; color: #3a4a3f; }
+
+  footer {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+    font-size: 0.85rem;
+    color: #6b7568;
+    border-top: 1px solid var(--line);
+    padding-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mark">CentSense</div>
+  <h1>A quiet nudge, right after you spend.</h1>
+  <p class="tagline">Real-time budget awareness, one text at a time.</p>
+</header>
+
+<main>
+  <section>
+    <h2>What it does</h2>
+    <p>
+      CentSense watches a single individual's own linked bank and card accounts, and sends that
+      same person a text message right after each purchase — noting how much of their budget for
+      that spending category has been used. At the end of each day, it sends a short summary of
+      that day's transactions.
+    </p>
+    <p>
+      It's a personal tool, built and used by one person to keep an eye on their own spending —
+      not a product offered to customers or the public.
+    </p>
+  </section>
+
+  <section>
+    <h2>How messaging is used</h2>
+    <ul>
+      <li>Messages are sent only to the account owner's own verified phone number.</li>
+      <li>There is exactly one recipient: the person who built and uses the tool.</li>
+      <li>Message volume is low — typically a handful of texts per day, tied directly to real purchases.</li>
+      <li>Sample message: "You've spent 75% of your Eating Out budget this period ($202 / $269)."</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="facts">
+      <div>
+        <dt>Use case</dt>
+        <dd>Personal budget &amp; spend alerts</dd>
+      </div>
+      <div>
+        <dt>Audience</dt>
+        <dd>Single individual (self)</dd>
+      </div>
+      <div>
+        <dt>Opt-in</dt>
+        <dd>Self-initiated, non-commercial</dd>
+      </div>
+      <div>
+        <dt>Status</dt>
+        <dd>Personal project, in development</dd>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  CentSense is an individual, non-commercial personal finance project. It is not a business and does not send messages to third parties.
+</footer>
+
+</body>
+</html>
